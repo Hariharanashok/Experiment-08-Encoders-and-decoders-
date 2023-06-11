@@ -56,19 +56,6 @@ D7 = X Y Z
 
 # Procedure
 
-Step1:- Open the quartus II software
-
-Step2:- Create a new project.
-
-Step3:- Name the projects such that the same name is used for mentioning the name of the module.
-
-Step4:- Develop programmes for both Encoder and Decoder using verilog programming.
-
-Step5:- Run RTL Simulation.
-
-Step6:- Create the Timing diagram.
-
-Step7:- Validate the outputs.
 
 
 # PROGRAM 
@@ -79,64 +66,42 @@ Developed by: Hariharan A
 RegisterNumber:  212222100012
 
 ## ENCODER
-```python
-module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
-output a,b,c;
-input d0,d1,d2,d3,d4,d5,d6,d7;
-or(a,d4,d5,d6,d7);
-or(b,d2,d3,d6,d7);
-or(c,d1,d3,d5,d7);
-endmodule
-```
+
 
 ## DECODER
-```python
-module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
-output d0,d1,d2,d3,d4,d5,d6,d7;
-input a,b,c;
-assign d0 = (~a&~b&~c);
-assign d1 = (~a&~b&c);
-assign d2 = (~a&b&~c);
-assign d3 = (~a&b&c);
-assign d4 = (a&~b&~c);
-assign d5 = (a&~b&c);
-assign d6 = (a&b&~c);
-assign d7 = (a&b&c);
-endmodule
-```
 
 
 # RTL LOGIC
 
 ## ENCODER
 
-![image](https://github.com/Hariharanashok/Experiment-08-Encoders-and-decoders-/assets/120353431/a69e83c5-f1de-4c0c-9241-1c663dd9be8a)
+
 
 ## DECODER
 
-![image](https://github.com/Hariharanashok/Experiment-08-Encoders-and-decoders-/assets/120353431/8919a394-5568-43a4-ac8c-b97e80ae5233)
+
 
 
 # TIMING DIAGRAMS
 
 ## ENCODER
 
-![image](https://github.com/Hariharanashok/Experiment-08-Encoders-and-decoders-/assets/120353431/f325542b-647a-4121-a430-2460d65d2985)
+
 
 ## DECODER
 
-![image](https://github.com/Hariharanashok/Experiment-08-Encoders-and-decoders-/assets/120353431/e80041e5-3fb9-4e4d-8643-767b1e4a014d)
+
 
 
 # TRUTH TABLE 
 
 ## ENCODER
 
-![image](https://github.com/Hariharanashok/Experiment-08-Encoders-and-decoders-/assets/120353431/101dc591-b6ed-48ac-ae9e-ce6bd2fa5fb5)
+
 
 ## DECODER
 
-![image](https://github.com/Hariharanashok/Experiment-08-Encoders-and-decoders-/assets/120353431/1e572ad7-e19e-476e-94ab-ab57158d01fb)
+
 
 
 # RESULTS
