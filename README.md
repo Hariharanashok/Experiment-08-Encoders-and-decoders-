@@ -1,7 +1,13 @@
 # Experiment-08- Encoders-and-decoders 
-### AIM: To implement 8 to 3 Encoder and  3to8 Decoder using verilog and validate its outputs
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### AIM:
+
+To implement 8 to 3 Encoder and  3to8 Decoder using verilog and validate its outputs
+### HARDWARE REQUIRED:  
+PC, Cyclone II , USB flasher
+
+### SOFTWARE REQUIRED: 
+Quartus prime
+
 ### THEORY 
 
 ## Encoders
@@ -48,32 +54,44 @@ D7 = X Y Z
 
 ![image](https://user-images.githubusercontent.com/36288975/171543978-ee2d0671-2846-40a1-8705-507fd6287a49.png)
 ## Figure -03 8 to 3 Decoder 
-![image](https://user-images.githubusercontent.com/36288975/171543866-5a6eace6-8683-49d7-9c4f-a7cb30ec3035.png)
 
+
+
+![image](https://user-images.githubusercontent.com/36288975/171543866-5a6eace6-8683-49d7-9c4f-a7cb30ec3035.png)
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
+### Step 1:
 
-1.create module encoder and decoder.
+Open Quartus II and select new project and choose the file location.
+Step 2:
 
-2.Get inputs and outputs for encoders and decoders.
+Module Declaration. Module should have the file name.
+### Step 3:
 
-3.perform or operation for encoder and and logic for decoders.
+Input-Output Delecaration.
+### Step 4:
 
-4.perform RTL LOGIC and get waveform.*/
+Use assign to define the functionality of logic circuits.
+### Step 5:
+
+At the end give endmodule.
+### Step 6:
+
+Run the program and choose RTL viewer to get RTL realization.
 
 
-
-# PROGRAM 
-
+### PROGRAM 
+/*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
 
-Developed by: HARIHARAN A
+Developed by: A HARIHARAN
 
-RegisterNumber: 212222100012 
+RegisterNumber:  212222100012
 
+*/
 ## ENCODER
-```python 
+```python
 module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
 output a,b,c;
 input d0,d1,d2,d3,d4,d5,d6,d7;
@@ -88,47 +106,35 @@ endmodule
 module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
 output d0,d1,d2,d3,d4,d5,d6,d7;
 input a,b,c;
-assign d0 = (~a&~b&~c);
-assign d1 = (~a&~b&c);
-assign d2 = (~a&b&~c);
-assign d3 = (~a&b&c);
-assign d4 = (a&~b&~c);
-assign d5 = (a&~b&c);
-assign d6 = (a&b&~c);
-assign d7 = (a&b&c);
+assign d0=(~a&~b&~c);
+assign d1=(~a&~b&c);
+assign d2=(~a&b&~c);
 endmodule
 ```
 
-# RTL LOGIC 
 
+# RTL LOGIC  
 ## ENCODER
-
-![image](https://github.com/NathinR/Experiment-08-Encoders-and-decoders-/assets/118679646/163324cc-5635-4298-855c-daa0b8992f55)
+![image](https://github.com/Nethraa24/Experiment-08-Encoders-and-decoders-/assets/121215786/dd82aeaa-a452-4b1a-9304-4aebac47a9f2)
 
 ## DECODER
+![image](https://github.com/Nethraa24/Experiment-08-Encoders-and-decoders-/assets/121215786/e466f3f4-9af9-4fe7-840b-6ee7f554520f)
 
-![image](https://github.com/NathinR/Experiment-08-Encoders-and-decoders-/assets/118679646/3a63ac44-9b51-4447-aa13-942cb3ae2af2)
 
 # TIMING DIGRAMS  
-
-## Encoder
-
-![image](https://github.com/NathinR/Experiment-08-Encoders-and-decoders-/assets/118679646/af233e4b-f409-4ab1-abb3-638af9cab952)
+## ENCODER
+![image](https://github.com/Nethraa24/Experiment-08-Encoders-and-decoders-/assets/121215786/58fd272a-4c77-4b96-b149-4916bd54eb03)
 
 ## DECODER
-
-![image](https://github.com/NathinR/Experiment-08-Encoders-and-decoders-/assets/118679646/07b1d303-ff53-41c6-9c1e-861546cb6cc8)
+![image](https://github.com/Nethraa24/Experiment-08-Encoders-and-decoders-/assets/121215786/860771b7-d25e-4089-b4cd-4528968dbfae)
 
 # TRUTH TABLE 
+## ENCODER
 
-## Encoder
+![image](https://github.com/Nethraa24/Experiment-08-Encoders-and-decoders-/assets/121215786/cde198af-1852-446f-9460-7e91595c1702)
+## DECODER
+![image](https://github.com/Nethraa24/Experiment-08-Encoders-and-decoders-/assets/121215786/240129d0-9940-42a5-a979-0fa3117e1516)
 
-![image](https://github.com/NathinR/Experiment-08-Encoders-and-decoders-/assets/118679646/c8fca45d-bfda-42f0-a3e3-a879e7425812)
-
-## Decoder
-
-![image](https://github.com/NathinR/Experiment-08-Encoders-and-decoders-/assets/118679646/65dc08a0-5bcd-4ff2-ba4e-1a4a6a2384be)
 
 # RESULTS 
-
-Thus the program to desing encoder and decoder is done.
+Thus, 8 to 3 Encoder and 3 to 8 Decoder is implemented using verilog and its outputs is validated.
